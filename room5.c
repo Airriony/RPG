@@ -6,16 +6,17 @@
 
 int main(void)
 {
-	int choice;
+	int chest;
+	char lvlOne = 'a';
 
 	puts("Welcome to room #5");
 
-	printf("Enter which chest to open");
+	printf("Enter which chest to open\n");
 	puts("1: Red Chest");
 	puts("2: Blue Chest");
 	puts("3: Gold Chest");
 	
-	scanf("%d", choice);
+	scanf("%d", &choice);
 
 	if(choice == 1)
 	{
@@ -26,6 +27,9 @@ int main(void)
 	{
 		puts("You have found the princess");
 		puts("The king has offered you a grand reward");
+
+		puts("Do you accept the kings reward? y-yes n-no");
+		scanf("%c", lvlOne);
 	}
 	if(choice == 3)
 	{
