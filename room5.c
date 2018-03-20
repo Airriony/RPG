@@ -30,10 +30,9 @@ int main(void)
 	{
 		puts("You have found the princess");
 		puts("The king has offered you a grand reward");
-
+		level1();/*
 		puts("Do you accept the kings reward? y-yes n-no");
 		scanf("%c", &lvlOne);
-
 		if(lvlOne == 'y')
 		{
 			level1();
@@ -41,7 +40,7 @@ int main(void)
 		if(lvlOne == 'n')
 		{
 			dead();
-		}
+		}*/
 	}
 	if(chest == 3)
 	{
@@ -58,13 +57,21 @@ void dead(void)
 void level1(void)
 {
 	char marry = 'a';
-
-	puts("The king has rewarded you with the princesses hand in marriage");
-	puts("Do you accept? y-yes n-no");
-	if(marry == 'y')
+	char reward = 'a';
+	
+	printf("Do you accept the king's reward? y-yes n-no");
+	scanf(" %c",&reward);
+	if(reward == 'y')
 	{
-		puts("Your wedding is next thurday");
-		puts("CONGRATULATIONS");
+	
+		puts("The king has rewarded you with the princesses hand in marriage");
+		puts("Do you accept? y-yes n-no");
+		scanf(" %c", &marry);
+		if(marry == 'y')
+		{
+			puts("Your wedding is next thurday");
+			puts("CONGRATULATIONS");
+		}
 	}
 	if(marry == 'n')
 	{
